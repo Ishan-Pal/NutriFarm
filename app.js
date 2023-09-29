@@ -4,12 +4,12 @@ const path = require('path');
 const app = express();
 const bodyparser=require('body-parser');
 const mongoose = require('mongoose');
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/complaintData');
+    await mongoose.connect('mongodb+srv://ishan30112001pal:gUiHcJTGqJwKW6Dq@mymongodb.5lti54d.mongodb.net/?retryWrites=true&w=majority');
     // data = await complaintData.complaint.find();
     //    const data = await Complaint.find()
     //     // const docs = JSON.parse(data)
